@@ -1,0 +1,48 @@
+<div class="center-content">
+    <div class="col-sm-12">
+        <h2>Merchant Form</h2>
+        <hr>
+        <form (ngSubmit)="submitForm()">
+            <tr>
+                Restaurant Name:
+                <td><input type="text" [(ngModel)]="merchant.restaurantName" name="restaurantName" required><br>
+                </td>
+            </tr>
+            <tr>
+                Contact Name:
+                <td><input type="text" [(ngModel)]="merchant.contactName" name="contactName" required><br>
+                </td>
+            </tr>
+            <tr>
+                Pincode:
+                <td><input type="text" [(ngModel)]="merchant.pincode" name="pincode" required><br>
+                </td>
+            </tr>
+            <tr>
+                Location:
+                <td><input type="text" [(ngModel)]="merchant.location" name="location" required><br>
+                </td>
+            </tr>
+            <tr>
+                Website:
+                <td><input type="text" [(ngModel)]="merchant.website" name="website"><br>
+                </td>
+            </tr>
+            <tr>
+                Phone Number:
+                <td><input type="text" [(ngModel)]="merchant.phoneNumber" name="phoneNumber" required><br>
+                </td>
+            </tr>
+            <tr>
+                Average Daily Transactions:
+                <td><input type="number" [(ngModel)]="merchant.averageDailyTransactions" name="averageDailyTransactions"
+                        required><br>
+                </td>
+            </tr>
+            <button class="custom-button" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<div *ngIf="status" class="col-sm-4">
+    <h3>Status: {{ status }}</h3>
+</div>
