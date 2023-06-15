@@ -7,6 +7,7 @@ import javax.persistence.Id;
 public class Merchant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String restaurantName;
     private String contactName;
     private String pincode;
@@ -18,7 +19,13 @@ public class Merchant {
 
     // getters and setters
 
+     public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
     public String getRestaurantName() {
         return restaurantName;
     }
